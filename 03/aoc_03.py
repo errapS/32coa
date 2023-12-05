@@ -16,7 +16,7 @@ def find_adjecent(line, num_range, sym_indexes):
 
     return res
 
-lines = [line for line in open('input.txt').readlines()]
+lines = [line for line in open('03/input.txt').readlines()]
 
 lines_indexes = [find_indexes(line) for line in lines]
 symbol_indexes, number_indexes = zip(*lines_indexes)
@@ -45,8 +45,8 @@ def find_indexes_gears(row_id, input_string):
     return ind_sym, ind_num
 
 
-lines = open('input.txt').readlines()
-lines_indexes = [find_indexes_gears(i, line) for i, line in enumerate(open('input.txt').readlines())]
+lines = open('03/input.txt').readlines()
+lines_indexes = [find_indexes_gears(i, line) for i, line in enumerate(open('03/input.txt').readlines())]
 symbol_indexes, number_indexes = zip(*lines_indexes)
 
 for symbol in symbol_indexes:

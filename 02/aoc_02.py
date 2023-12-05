@@ -3,7 +3,7 @@ from functools import reduce
 
 config = {'red': 12, 'green': 13, 'blue': 14}
 sum = 0
-for i, line in enumerate(open('input.txt').readlines()):
+for i, line in enumerate(open('02/input.txt').readlines()):
     matches = re.compile(r'(\d+)\s([a-zA-Z]+)').findall(line)
     game_values = [int(match[0]) for match in matches]
     max_game_values = [config[match[1]] for match in matches]
@@ -14,7 +14,7 @@ for i, line in enumerate(open('input.txt').readlines()):
 print('ANSWER PART A: ', sum)
 
 sum = 0
-for i, line in enumerate(open('input2.txt').readlines()):
+for i, line in enumerate(open('02/input2.txt').readlines()):
     matches = re.compile(r'(\d+)\s([a-zA-Z]+)').findall(line)
     game_values = [int(match[0]) for match in matches]
     colors = [match[1] for match in matches]
