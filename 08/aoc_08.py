@@ -34,8 +34,5 @@ for key in nodes_a:
             break
         node = nodes[node[idx]]
 
-def calc_steps_for_sync(steps_per_node):
-    return math.lcm(*steps_per_node)
-
-res = calc_steps_for_sync(steps_per_node)
+res = math.lcm(*steps_per_node)
 print('ANSWER PART B: ', res)
